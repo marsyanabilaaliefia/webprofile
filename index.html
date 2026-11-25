@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marsya's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cat" viewBox="0 0 40 30">
+    <path d="M3 14 4 2 14 8Q20 6.5 26 8L36 2 37 14Q39 28 20 28 1 28 3 14Z" fill="var(--catfill,#fff)" stroke="#2f5d8a" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="13" cy="16" r="1.8" fill="#2f5d8a"/><circle cx="27" cy="16" r="1.8" fill="#2f5d8a"/>
+    <path d="M17.5 21q2.5 2.5 5 0" fill="none" stroke="#2f5d8a" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="bar">
+  <button id="back" class="chip" hidden>◄ BACK</button>
+  <h1 id="crumb">MARSYA'S</h1>
+  <button id="bgm" class="chip" aria-label="Putar atau hentikan backsound">♪ BGM: OFF</button>
+  <button id="theme" aria-label="Ganti mode terang / gelap"><b></b></button>
+  <span class="dots"><i></i><i></i><i></i></span>
+</header>
+
+<main class="frame">
+  <section id="home" class="page on home">
+    <nav id="icons" class="icons"></nav>
+
+    <div class="cell c-detail">
+      <button class="win" data-go="detail">
+        <h3>ABOUT MARSYA<span class="dots"><i></i><i></i><i></i></span></h3>
+        <div id="stk" class="stk"></div>
+      </button>
+      <div class="err" id="err">
+        <h4>ERROR<span class="dots"><i></i></span></h4>
+        <p>TOO CUTE!!</p><button id="ok" class="chip">OK</button>
+      </div>
+    </div>
+
+    <button class="win c-port" data-go="port">
+      <h3>PORTFOLIO<span class="dots"><i></i><i></i><i></i></span></h3>
+      <div class="art">
+        <svg viewBox="0 0 40 30" class="bigcat"><use href="#cat" width="40" height="30" style="--catfill:#e8f6ff"/></svg>
+        <div class="sw"><i style="background:#a9d6f5"></i><i style="background:#c8f0e0"></i><i style="background:#fff0b3"></i><i style="background:#ffd3e1"></i><i style="background:#dcd5ff"></i><i style="background:#3a86b8"></i></div>
+      </div>
+    </button>
+
+    <div class="win c-sun">
+      <svg viewBox="0 0 60 60" class="sun">
+        <g class="rays" stroke="#f3b83c" stroke-width="3" stroke-linecap="round">
+          <path d="M30 3v7M30 50v7M3 30h7M50 30h7M11 11l5 5M44 44l5 5M49 11l-5 5M16 44l-5 5"/>
+        </g>
+        <circle cx="30" cy="30" r="14" fill="#ffe27a" stroke="#2f5d8a" stroke-width="2.5"/>
+        <path d="M19 26h22v4q0 5-5 5h-3q-3 0-3-3-1-2-2 0 0 3-3 3h-3q-6 0-6-5z" fill="#2f5d8a"/>
+        <path d="M24 40q6 4 12 0" fill="none" stroke="#2f5d8a" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <p id="hello">Welcome!</p>
+    </div>
+  </section>
+
+  <section id="view" class="page"></section>
+</main>
+
+<div id="wipe" hidden></div>
+<audio id="au" preload="none"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
